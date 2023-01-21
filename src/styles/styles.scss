@@ -4,3 +4,34 @@ body{
   background: rgb(62, 62, 63);
   color: white;
 }
+
+h1{
+  text-align: center;
+}
+
+.pagination{
+  &-container{
+    display: flex;
+    justify-content: center;
+  }
+  &-link{
+    font-size: 2rem;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    display: block;
+    padding: 10px;
+    transition: color .25s ease-out;
+    &.active{
+      color: rgb(6, 97, 124);
+      transition: color .25s ease-out;
+      &:hover{
+        color: rgb(5, 78, 100);
+      }
+    }
+    &:hover{
+      color: rgb(204, 201, 201);
+      transition: color .25s ease-out;
+    }
+  }
+}

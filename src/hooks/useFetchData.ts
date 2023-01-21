@@ -16,7 +16,6 @@ export const useFetchData = function(){
 
   useEffect( () => {
     let filteredData:any = [];
-
      users && users.results.forEach( (user:IUser) => {
       const filteredPropUser = flatPick(user, ['name.first', 'name.last', 'dob.age', 'email']);
       filteredData.push(filteredPropUser);
@@ -33,7 +32,7 @@ export const useFetchData = function(){
     })
 
     setCleanedData(flattenUsers);
-  }, [])
+  }, [users])
 
   return [cleanedData, status, error] as const;
 }

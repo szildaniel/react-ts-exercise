@@ -1,5 +1,4 @@
 import Pagination from '../Pagination';
-import { IFilteredUser } from "../../types/TUser";
 import { useFetchData } from "../../hooks/useFetchData";
 
 
@@ -12,14 +11,11 @@ export default function App() {
 
   return (
   <>
-    <h1>All Users</h1>
-    <ul>
-    {cleanedData && cleanedData.map( (user: IFilteredUser, i:number) => (
-      <li key={i}>{user.name}</li>
-    ))}
-    </ul>
-    
+    <h1>Current Page Users</h1>
     <Pagination allUsers={cleanedData} usersPerPage={5}/>
   </>
   )
 }
+
+
+//todo funkcja w Pagination array of number, onError functions
