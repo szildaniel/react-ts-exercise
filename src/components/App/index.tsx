@@ -1,5 +1,6 @@
 import Pagination from '../Pagination';
 import { useFetchData } from "../../hooks/useFetchData";
+import FetchError from '../FetchError';
 
 
 export default function App() {
@@ -7,7 +8,7 @@ export default function App() {
   const [cleanedData, status, error] = useFetchData();
 
   if(status === "loading") return <h1>Loading ...</h1>
-  if(status === "error") return <h1>{JSON.stringify(error)}</h1>
+  if(status === "error") return <FetchError msg={error?.message}/>
 
   return (
   <>
@@ -16,6 +17,3 @@ export default function App() {
   </>
   )
 }
-
-
-//todo funkcja w Pagination array of number, onError functions

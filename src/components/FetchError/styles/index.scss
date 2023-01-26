@@ -1,0 +1,25 @@
+.error{
+    &__container{
+        margin-top: 50px;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        width: max-content;
+    }
+
+    &__heading{
+        color: white;
+        padding: 0 20px;
+        position: absolute;
+        font-size: 1.6rem;
+    }
+
+    &__text{
+        color: white;
+        bottom: 20px;
+        text-align: center;
+        left: 50%;
+        transform: translateX(-50%);
+        position: absolute;
+    }
+}

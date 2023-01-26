@@ -1,13 +1,15 @@
 import {useState, useEffect} from 'react';
 import { flatPick } from '../helpers/flatPick';
 import { IFilteredUser, IUser } from '../types/TUser';
+import { IDataModel } from '../types/IDataModel';
 import {getUsers} from '../api/users';
 import {useQuery} from "react-query";
 
 
+
 export const useFetchData = function(){
 
-  const {status, error, data: users } = useQuery({
+  const {status, error, data: users } = useQuery<IDataModel, Error>({
     queryKey: ["users"],
     queryFn: getUsers,
   })
